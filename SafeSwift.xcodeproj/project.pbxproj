@@ -10,6 +10,7 @@
 		DB933C12195F28560052D409 /* SafeSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = DB933C11195F28560052D409 /* SafeSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DB933C18195F28560052D409 /* SafeSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB933C0C195F28560052D409 /* SafeSwift.framework */; };
 		DB933C1F195F28560052D409 /* SafeSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB933C1E195F28560052D409 /* SafeSwiftTests.swift */; };
+		DBBC0CE2195F4F2A00FEE4A0 /* Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB933C28195F286C0052D409 /* Safe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		DB933C17195F28560052D409 /* SafeSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SafeSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB933C1D195F28560052D409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB933C1E195F28560052D409 /* SafeSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeSwiftTests.swift; sourceTree = "<group>"; };
+		DB933C28195F286C0052D409 /* Safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Safe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				DB933C11195F28560052D409 /* SafeSwift.h */,
 				DB933C0F195F28560052D409 /* Supporting Files */,
+				DB933C28195F286C0052D409 /* Safe.swift */,
 			);
 			path = SafeSwift;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBBC0CE2195F4F2A00FEE4A0 /* Safe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +320,7 @@
 		DB933C23195F28560052D409 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -327,12 +332,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		DB933C24195F28560052D409 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -400,6 +407,7 @@
 				DB933C24195F28560052D409 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DB933C25195F28560052D409 /* Build configuration list for PBXNativeTarget "SafeSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +416,7 @@
 				DB933C27195F28560052D409 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
