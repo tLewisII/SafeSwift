@@ -25,6 +25,14 @@ extension Array {
         }
     }
     
+    func safeLast() -> T? {
+        if !self.isEmpty {
+            return self[self.count - 1]
+        } else {
+            return nil
+        }
+    }
+    
     func safeTail() -> T[]? {
         if self.count > 1 {
             return Array(self[1..self.count])
@@ -35,7 +43,7 @@ extension Array {
     
     func safeRange(r:Array<Range<Int>>) -> T[]? {
         if let range = r.safeHead() {
-            if range.startIndex >= 0 && range.endIndex < self.count {
+            if range.startIndex >= 0 && range.endIndex <= self.count {
                 return Array(self[range])
             }
         }
