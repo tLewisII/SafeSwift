@@ -10,7 +10,7 @@ func safeIndex(i:Int) -> T?
 func safeHead() -> T?
 func safeTail() -> T[]?
 func safeLast() -> T?
-func safeRange(r:Array<Range<Int>>) -> T[]?
+func safeRange(r:Range<Int>) -> T[]?
 ```
 Optional Type Signatures
 

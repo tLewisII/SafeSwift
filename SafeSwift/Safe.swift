@@ -41,12 +41,14 @@ extension Array {
         }
     }
     
-    func safeRange(r:Array<Range<Int>>) -> T[]? {
-        if let range = r.safeHead() {
-            if range.startIndex >= 0 && range.endIndex <= self.count {
-                return Array(self[range])
-            }
+    func safeRange(r:Range<Int>) -> T[]? {
+        if r.startIndex > r.endIndex {
+            return nil
         }
+        if r.startIndex >= 0 && r.endIndex <= self.count {
+            return Array(self[r])
+        }
+        
         return nil
     }
 }

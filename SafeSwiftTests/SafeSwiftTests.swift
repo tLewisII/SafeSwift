@@ -57,9 +57,9 @@ class SafeSwiftTests: XCTestCase {
     
     //    func testSafeRange() {
     //        let array = [1,2,3,4]
-    //        XCTAssert(array.safeRange([1...4]) == nil, "Should be nil")
+    //        XCTAssert(array.safeRange(1...4) == nil, "Should be nil")
     //
-    //        if let unwrap = array.safeRange([1..4]) {
+    //        if let unwrap = array.safeRange(1..4) {
     //            XCTAssert(unwrap == [2,3,4], "Should be [2,3,4]")
     //        } else {
     //            XCTFail("Should not be reached")
