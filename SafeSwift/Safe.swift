@@ -36,6 +36,8 @@ extension Array {
     func safeTail() -> T[]? {
         if self.count > 1 {
             return Array(self[1..self.count])
+        } else if self.count == 1 {
+            return []
         } else {
             return nil
         }
