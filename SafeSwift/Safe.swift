@@ -33,9 +33,9 @@ extension Array {
         }
     }
     
-    func safeTail() -> T[]? {
+    func safeTail() -> [T]? {
         if self.count > 1 {
-            return Array(self[1..self.count])
+            return Array(self[1..<self.count])
         } else if self.count == 1 {
             return []
         } else {
@@ -43,7 +43,17 @@ extension Array {
         }
     }
     
-    func safeRange(r:Range<Int>) -> T[]? {
+    func safeInit() -> [T]? {
+        if self.count > 1 {
+            return Array(self[0..<self.count - 1])
+        } else if self.count == 0 {
+            return []
+        } else {
+            return nil
+        }
+    }
+    
+    func safeRange(r:Range<Int>) -> [T]? {
         if r.startIndex > r.endIndex {
             return nil
         }
